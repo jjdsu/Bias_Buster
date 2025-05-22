@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
@@ -23,9 +22,9 @@ export default function Navbar() {
 
   return (
     <Nav>
-      <Tab to="/trust" active={location.pathname === "/trust" ? 1 : 0}>신뢰도</Tab>
-      <Tab to="/summary" active={location.pathname === "/summary" ? 1 : 0}>요약</Tab>
-      <Tab to="/analysis" active={location.pathname === "/analysis" ? 1 : 0}>분석</Tab>
+      <Tab to="/trust" active={location.pathname === "/trust" ? 1 : 0}>신뢰도 측정</Tab>
+      <Tab to="/summary" active={location.pathname === "/summary" ? 1 : 0}>기사 요약</Tab>
+      <Tab to="/analysis" active={location.pathname === "/analysis" ? 1 : 0}>기사 분석</Tab>
     </Nav>
   );
 }
