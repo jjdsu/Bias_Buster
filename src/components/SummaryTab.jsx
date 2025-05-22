@@ -1,7 +1,7 @@
-
 import { useState } from "react";
 import Layout from "./Layout";
 import ArticleInput from "./ArticleInput";
+import Card from "./Card";
 
 export default function SummaryTab() {
   const [result, setResult] = useState(null);
@@ -10,12 +10,14 @@ export default function SummaryTab() {
     <Layout>
       <h2>요약</h2>
       <ArticleInput onResult={(data) => setResult(data)} />
-      {result && (
-        <div>
-          <p><strong>신뢰도 점수:</strong> {result.trustScore}</p>
-          <p><strong>설명:</strong> {result.explanation}</p>
-        </div>
-      )}
+      <Card>
+        {result && (
+          <div>
+            <p><strong>요약 결과:</strong></p>
+            <p>{result.summary}</p>
+          </div>
+        )}
+      </Card>
     </Layout>
   );
 }

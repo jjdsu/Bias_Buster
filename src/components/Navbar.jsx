@@ -1,31 +1,23 @@
+import Layout from "./Layout";
+import ArticleInput from "./ArticleInput";
+import { useState } from "react";
+import Card from "./Card";
 
-import { Link, useLocation } from "react-router-dom";
-import styled from "styled-components";
-
-const Nav = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: #fff3e0;
-  padding: 16px;
-  gap: 20px;
-`;
-
-const Tab = styled(Link)`
-  font-weight: bold;
-  color: ${({ active }) => (active ? "#d32f2f" : "#888")};
-  text-decoration: none;
-  border-bottom: ${({ active }) => (active ? "2px solid #d32f2f" : "none")};
-  padding-bottom: 4px;
-`;
-
-export default function Navbar() {
-  const location = useLocation();
-
+export default function AnalysisTab() {
+  const [result, setResult] = useState(null);
+  
   return (
-    <Nav>
-      <Tab to="/trust" active={location.pathname === "/trust" ? 1 : 0}>신뢰도</Tab>
-      <Tab to="/summary" active={location.pathname === "/summary" ? 1 : 0}>요약</Tab>
-      <Tab to="/analysis" active={location.pathname === "/analysis" ? 1 : 0}>분석</Tab>
-    </Nav>
+    <Layout>
+      <h2>분석</h2>
+      <ArticleInput onResult={(data) => setResult(data)} />
+      <Card>
+        {result && (
+          <div>
+            <p><strong>분석 결과:</strong></p>
+            <p>{result.analysis}</p>
+          </div>
+        )}
+      </Card>
+    </Layout>
   );
 }
