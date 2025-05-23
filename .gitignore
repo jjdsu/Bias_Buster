@@ -1,0 +1,11 @@
+# 시스템
+.DS_Store
+Thumbs.db
+
+# IDE/에디터
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# 빌드 산출물
+*.zip

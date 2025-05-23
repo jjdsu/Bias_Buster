@@ -1,0 +1,22 @@
+
+{
+  "manifest_version": 3,
+  "name": "뉴스 신뢰도 분석기 (사이드바)",
+  "version": "1.0",
+  "description": "기사 페이지에 신뢰도 분석 결과를 오른쪽 사이드에 표시합니다.",
+  "permissions": ["scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
