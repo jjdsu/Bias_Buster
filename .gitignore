@@ -9,3 +9,4 @@ Thumbs.db
 
 # 빌드 산출물
 *.zip
+node_modules
