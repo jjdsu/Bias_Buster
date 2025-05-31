@@ -1,0 +1,27 @@
+# ========================
+# 공통 (node_modules, __pycache__ 등)
+# ========================
+
+# Node.js (프론트엔드)
+BiasBuster_front/node_modules/
+BiasBuster_front/dist/
+BiasBuster_front/.env.local
+BiasBuster_front/.env.*.local
+
+# Python (백엔드)
+BiasBuster_back/__pycache__/
+BiasBuster_back/*.pyc
+BiasBuster_back/.env
+BiasBuster_back/.venv/
+BiasBuster_back/venv/
+BiasBuster_back/.pytest_cache/
+BiasBuster_back/app/data
+
+# VSCode 설정 (필요 없는 경우)
+.vscode/
+.idea/
+
+# OS별 잡파일
+.DS_Store
+Thumbs.db
+

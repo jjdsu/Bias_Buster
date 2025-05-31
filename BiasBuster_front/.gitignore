@@ -1,0 +1,42 @@
+# Node.js 종속성
+/node_modules/
+
+# 빌드 결과물
+/dist/
+/dist-*/            # 혹시 temp-dist 등 별도 빌드 디렉터리 생성 시
+
+# 환경 변수 파일
+.env
+.env.*.local
+
+# 로그 파일
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# OS별 메타데이터
+.DS_Store
+Thumbs.db
+
+# IDE 설정
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# TypeScript 빌드 캐시
+*.tsbuildinfo
+
+# Vite 캐시
+node_modules/.vite/
+
+# Chrome 확장 테스트용 프로필(예시)
+/chrome-profile/
+
+# 기타 임시 파일
+*.tmp
+*.swp

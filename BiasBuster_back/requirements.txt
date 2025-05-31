@@ -1,0 +1,17 @@
+fastapi
+fastapi[all]
+uvicorn
+pydantic
+pydantic-settings
+sqlalchemy
+psycopg2-binary
+scikit-learn
+joblib
+transformers
+datasets
+torch
+accelerate
+pandas
+numpy
+requests
+beautifulsoup4
