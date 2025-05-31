@@ -15,7 +15,8 @@ BiasBuster_back/.env
 BiasBuster_back/.venv/
 BiasBuster_back/venv/
 BiasBuster_back/.pytest_cache/
-BiasBuster_back/app/data
+BiasBuster_back/app/data/processed
+BiasBuster_back/app/data/raw
 
 # VSCode 설정 (필요 없는 경우)
 .vscode/
